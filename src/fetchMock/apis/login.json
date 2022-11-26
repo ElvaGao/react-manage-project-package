@@ -1,0 +1,35 @@
+{
+  "status": 10000,
+  "result": "success",
+  "data": {
+    "token": "token123",
+    "userName": "ABC",
+    "roleList": [
+      {
+       "roleName": "管理员",
+       "menuList": [{
+        "icon": "el-icon-s-home",
+        "path": "/welcome",
+        "title": "首页"
+       }, {
+        "icon": "el-icon-s-tools",
+        "path": "/setting",
+        "title": "设置",
+        "subs": [{
+          "icon": "el-icon-s-home",
+          "path": "/setting",
+          "title": "子菜单"
+         }]
+       }]
+      },
+      {
+        "roleName": "用户",
+        "menuList": [{
+          "icon": "el-icon-s-home",
+          "path": "/welcome",
+          "title": "首页"
+         }]
+      }]
+  },
+  "msg":""
+}
