@@ -19,6 +19,8 @@ In the project directory, you can run:
 解决fetch与mock接口的冲突，模拟接口返回
 ### 3.使用react-redux全局保存登录信息
 登录的用户信息，菜单信息和token等保存
+### 4.二次封装fetch请求
+请求接口apis保存
 
 ## 功能
 ### 1.登录页面

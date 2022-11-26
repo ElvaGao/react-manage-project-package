@@ -1,22 +1,29 @@
 //引入connect用于连接UI组件与redux
 import { connect } from "react-redux"
 //引入action
-import { setRoleList } from './../../redux/actions/roleList'
-import { setMenuList } from './../../redux/actions/menuList'
-import { setRole } from './../../redux/actions/role'
-import { setToken } from './../../redux/actions/token'
+import { setRoleList } from './../../../redux/actions/roleList'
+import { setMenuList } from '../../../redux/actions/menuList'
+import { setRole } from '../../../redux/actions/role'
+import { setToken } from '../../../redux/actions/token'
 import { Fragment } from 'react';
 // antd
 import { Form, Button } from 'antd';
 // 组件
-import FormItem from "./../../components/formItem"
+import FormItem from "../../../components/formItem"
 // api接口
-import { login } from '../../api/login'
+import { login } from '../../../api/login'
 import loginStyle from "./Login.module.scss"
+// 路由
+import {useNavigate} from 'react-router-dom'
 
 function LoginUI(props){
     const [form] = Form.useForm();
     const { setToken, setRoleList, setRole, setMenuList } = props
+    // 登陆后跳转到home页面：路由hook,编程式导航
+    const navigate = useNavigate()
+    function jump2Home(){
+        navigate('/home/welcome')
+    }
     const onFinish = (values) => {
         login(values).then((res) => {
             const { data } = res || {}
@@ -27,6 +34,7 @@ function LoginUI(props){
             setRole(role)
             const menuList = role.menuList
             setMenuList(menuList)
+            jump2Home()
         })
         // console.log('Success:', values);
     };
@@ -93,9 +101,6 @@ function LoginUI(props){
                     </Fragment>
                 </FormItem>
             </Form>
-            <div>
-                {props.token}
-                </div>
         </div>
     );
 }

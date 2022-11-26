@@ -1,0 +1,20 @@
+$bg_box : rgba(255,255,255,0.6);
+$radius_box: 10px;
+.box{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(./../../../../public/img/login.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    .form{
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%);
+        width: 40%;
+        padding: 20px;
+        border-radius: $radius_box;
+        background-color: $bg_box !important;
+    }
+}

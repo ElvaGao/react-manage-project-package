@@ -16,6 +16,8 @@ import { persistStore, persistReducer } from 'redux-persist'
 const persistConfig = {
     key: 'root',
     storage: sessionStorage,
+    // whitelist: ["language"], //需要缓存的数据
+    // blacklist:[], //不需要缓存的数据
 }
 //处理持久化store
 const persistedReducer = persistReducer(persistConfig, reducers)

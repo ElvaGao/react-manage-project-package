@@ -1,0 +1,19 @@
+.header{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+    p{
+        float: left;
+        line-height: 30px;
+        padding-left: 10px;
+        color: #fff;
+    }
+    .selectHeader{
+        float: right;
+        margin-right: 10px;
+    }
+
+}

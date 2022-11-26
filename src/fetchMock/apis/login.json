@@ -8,26 +8,25 @@
       {
        "roleName": "管理员",
        "menuList": [{
-        "icon": "el-icon-s-home",
-        "path": "/welcome",
-        "title": "首页"
+        "icon": "HomeOutlined",
+        "key": "/home/welcome",
+        "label": "首页"
        }, {
-        "icon": "el-icon-s-tools",
-        "path": "/setting",
-        "title": "设置",
-        "subs": [{
-          "icon": "el-icon-s-home",
-          "path": "/setting",
-          "title": "子菜单"
+        "icon": "SettingOutlined",
+        "key": "/home/setting",
+        "label": "设置",
+        "children": [{
+          "key": "/home/setting/children",
+          "label": "子菜单"
          }]
        }]
       },
       {
         "roleName": "用户",
         "menuList": [{
-          "icon": "el-icon-s-home",
-          "path": "/welcome",
-          "title": "首页"
+          "icon": "HomeOutlined",
+          "key": "/home/welcome",
+          "label": "首页"
          }]
       }]
   },

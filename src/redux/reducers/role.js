@@ -5,6 +5,6 @@ export default function roleReducer(preState = {}, action) {
         case 'role':
             return {...preState,...data};
         default:
-            return {...preState}
+            return preState
     }
 }
