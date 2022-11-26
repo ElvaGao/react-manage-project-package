@@ -5,7 +5,6 @@ import { connect } from "react-redux"
 import { Menu  } from 'antd';
 // api接口
 import siderbarStyle from "./Siderbar.module.scss"
-import { MailOutlined } from '@ant-design/icons';
 import * as Icon from '@ant-design/icons';
 // 路由
 import { useNavigate, useLocation } from 'react-router-dom'
